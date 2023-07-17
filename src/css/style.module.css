@@ -1,0 +1,34 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body, html{
+    height: 100%;
+    margin: 0;
+}
+body{
+    background-color: #96cfd5;
+    background-image: linear-gradient(to bottom right,
+    rgba(102,160,198,1),
+    rgba(103,180,207,1),
+    rgba(142,239,249,1),
+    rgba(150,207,213,1));
+    background-repeat: round space;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1680px){
+    /* card */
+    .card{
+        background-color: white;
+        padding: 20px;
+        margin-top: 10px;
+        border: #cbdeff 2px solid;
+        border-radius: 25px;
+        display: inline-block;
+    }
+    header{
+        padding-bottom: 10px;
+    }
+}

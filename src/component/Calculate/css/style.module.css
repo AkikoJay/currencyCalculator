@@ -1,0 +1,33 @@
+@media (max-width: 1680px){
+    /* preloader */
+    .preloader img{
+        display: flex;
+        justify-content: center;
+    }
+    /* selector */
+    .currency_selector{
+        display: block;
+        margin: 10px 0 5px;
+
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        color: #54a3d3;
+        background-color: #f9f9f9;
+        box-shadow: 1px 1px #ccc;
+
+        cursor: pointer;
+    }
+
+    /* input */
+    .currency_input{
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 1px 1px #ccc;
+        color: rgb(41, 41, 41);
+
+        font-size: 16px;
+    }
+}

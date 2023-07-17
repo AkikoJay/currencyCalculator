@@ -1,0 +1,16 @@
+@media (max-width: 1680px){
+    /* h3 */
+    .rate{
+        display: inline;
+    }
+    header > h3.rate:first-child{
+        margin-right: 10px;
+    }
+    .rate_number{
+        margin-left: 5px;
+        color: rgb(34, 180, 34);
+    }
+
+    /* hr */
+    hr{margin-bottom: 0;}
+}

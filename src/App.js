@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import CalculateContainer from "./component/Calculate/CalculateContainer";
+import HeaderContainer from './component/Header/HeaderContainer'
+import style from './css/style.module.css'
+import { rootReducer } from './store/reducers'
+import { legacy_createStore as createStore} from 'redux'
+import { Provider } from "react-redux";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const store = createStore(rootReducer)
+
+class App extends React.Component {
+  render(){
+    return<Provider store ={store}>
+      <div className={style.card}>
+        <HeaderContainer />
+        <CalculateContainer />
+      </div>
+    </Provider>
+  }
 }
 
 export default App;

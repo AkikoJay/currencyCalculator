@@ -1,9 +1,9 @@
 import React from "react";
 import Input from "./Input/Input";
+import Preloader from "../common/Preloader/Preloader";
 import style from './css/style.module.css'
 import { connect } from "react-redux";
 import { setFirstSelector, changeValue, setSecondSelector, currentSelector } from './store/input-action';
-import preloader from '../../img/Ball-1s-141px.svg'
 
 class CalculateContainer extends React.Component{
     constructor(props) {
@@ -43,9 +43,8 @@ class CalculateContainer extends React.Component{
         const first = this.props.current === '2'? this.convert(value): value;
         const second = this.props.current === '1'? this.convert(value): value;
         return<div className={style.preloader}>
-            {this.props.isFetching ? 
-                <img src={preloader} 
-                alt='preloader'/>:
+            {this.props.isFetching ? <Preloader />
+                :
                 <>
                     <Input 
                     value={first} 
